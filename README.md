@@ -22,8 +22,27 @@
    - 네이버 맞춤법 검사기를 이용한 파이썬용 한글 맞춤법 검사 라이브러리 **py-hanspell**을 사용하여 요약문의 맞춤법을 교정
 
 3. 문법 검사
-4. 문제 생성
-5. 힌트
-6. 반응형 웹사이트 프로토모델
+   - transformers 라이브러리에서 제공하는 사전 학습된 모델 4가지를 성능비교
+     - KoELECTRA :monologg/koelectra-base-v3-discriminator 모델
+     - TUNiB-ELECTRA : monologg/tunib-electra-base-generator 모델
+     - Klue ReBERT : klue/bert-base 모델
+     - Kobert : monologg/kobert
+   
+   ![사전훈련된 언어모델](https://github.com/jong4499/DSBA_fin_PJT/assets/141287150/50dcb3ab-9d51-4927-a6bc-7c213c259721)
+      - 총 3가지 경우를 가정하여 성능비교 진행
+      - case1 : 초등학교 수준의 109문장 (정상문장 50, 오류문장 59)
+      - case2 : 초등학교 수준의 109문장 (정상문장 109)
+      - case3 : 초등학교 수준의 222문장 (정상문장 222)
+      - **결과 : KoELECTRA모델이 나머지 모델들 보다 우수한 모델**
+        
+   - 성능 향상을 위해 파인튜닝(Fine-tuning) 실시
+     - 국립국어원의 모두의 말뭉치에서 제공하는 기사 요약문으로 일부분은 오류문장으로 변경하여 학습데이터로 사용
+     - AI-hub에서 제공하는 기사요약문을 이용하여 정상문장과 오류문장 각각 1004문장으로 성능을 테스트
+     ![파인튜닝종합](https://github.com/jong4499/DSBA_fin_PJT/assets/141287150/61b9a3c3-91a5-4671-8577-446ed27de0a0)
+
+
+5. 문제 생성
+6. 힌트
+7. 반응형 웹사이트 프로토모델
 
    
