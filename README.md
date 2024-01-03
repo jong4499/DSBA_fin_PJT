@@ -1,4 +1,6 @@
 # 문해력 증진을 위한 용어 퀴즈
+![맞춰조_포스터_1](https://github.com/jong4499/DSBA_fin_PJT/assets/141287150/ef9e8dd7-8da1-41a2-a822-a1269f6b0f3f)
+
 
 - DSBA 최종 프로젝트
 1. 시스템 흐름
